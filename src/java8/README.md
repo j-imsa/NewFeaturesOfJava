@@ -1,5 +1,6 @@
 # Java 8 (LTS)
 
+<hr>
 
 ### Functional Programming
 
@@ -19,3 +20,27 @@
     - Return function from a function
 
 **Functional programming = Declarative style programming + Higher order function**
+
+<hr>
+
+### Lambda Expression
+
+- Anonymous
+  - less to write, and think about
+- Function
+  - parameters
+  - body
+  - return type
+  - exceptions
+  - ...
+- Passed around
+  - passed as argument
+  - stored in a variable
+- Concise
+
+#### Before, After
+
+#### Behavior Parameterization
+
+<hr>
+
