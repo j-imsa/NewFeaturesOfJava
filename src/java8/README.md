@@ -1,0 +1,21 @@
+# Java 8 (LTS)
+
+
+### Functional Programming
+
+- Imperative style programming
+  - what to do? 
+  - How to do?
+- Declarative style programming
+  - what to do?
+- Higher order function
+  - what is a function?
+    - Pass objects to a function
+    - Create objects within a function
+    - Return objects from a function
+  - what is the HOF?
+    - Pass functions to a function
+    - Create function within a function
+    - Return function from a function
+
+**Functional programming = Declarative style programming + Higher order function**
