@@ -111,8 +111,55 @@ Type 3:
 - ...
 
 
+<hr>
+
+### Streams
+
+- Java API
+- manipulating collections of data in a declarative way
+- query rather than code
+- fancy iterators over data collections
+- parallel transparency, without multithreaded code
+- **stateless vs stateful**
+
+#### Filtering
+
+- filter(Predicate)
+  - distinct()
+  - limit(int) 
+  - skip(int)
 
 
+#### Mapping
+
+- map(Function)
+- flatMap()
 
 
+#### Finding
 
+- anyMatch
+- allMatch
+- noneMatch
+- findFirst -> return Optional
+- findAny -> return Optional
+
+
+#### Reducing
+
+- functional programming term "fold"
+- reduce(init value, BinaryOperator< T >)
+```java
+int sum = numbers.stream().reduce(0, (a, b) -> a + b);
+```
+- reduce(BinaryOperator< T >)
+
+```java
+import java.util.Optional;
+
+Optional<Integer> max = numbers.stream().reduce(Integer::max);
+```
+
+#### Sorting
+
+- sort(Comparator) => (T, T) -> int
