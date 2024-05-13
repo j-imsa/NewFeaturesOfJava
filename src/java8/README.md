@@ -72,12 +72,36 @@ References: [Functional Interface (Oracle)](https://docs.oracle.com/javase/8/doc
 
 <hr>
 
+### Method Reference
+
+#### Before, After
+
+- Static method (Integer::parseInt)
+- Instance method (of an arbitrary type like String::length)
+- Instance method (of an existing object expensiveTransaction::getValue)
+
+Type 1:
+
+| Lambda                                    | Method Reference          |
+|-------------------------------------------|---------------------------|
+| (args) -> ClassName.staticMethod(args)    | ClassName.staticMethod    |  
 
 
+Type 2:
+
+| Lambda                                    | Method Reference          |
+|-------------------------------------------|---------------------------|
+| (arg0, rest) -> arg0.instanceMethod(rest) | ClassName::instanceMethod |  
 
 
+Type 3:
+
+| Lambda                                    | Method Reference          |
+|-------------------------------------------|---------------------------|
+| (args) -> expr.instanceMethod(args)       | expr::instanceMethod      |  
 
 
+<hr>
 
 
 
