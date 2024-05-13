@@ -44,3 +44,46 @@
 
 <hr>
 
+### Functional Interface
+
+```java
+@FunctionalInterface
+```
+
+package: java.util.stream (Interface Stream<T>)
+- Predicate
+- Supplier
+- BiConsumer
+- ...
+
+| Functional Interface | Function Descriptor | Primitive Specialization                                               |
+|----------------------|---------------------|------------------------------------------------------------------------|
+| Predicate<T>         | T -> boolean        | IntPredicate<br/>LongPredicate<br/>DoublePredicate                     | 
+| Consumer<T>          | T -> void           | IntConsumer<br/>LongConsumer<br/>DoubleConsumer                        |
+| Function<T, R>       | T -> R              | IntFunction<R><br/>IntToDoubleFunction<br/>ToDoubleFunction<T><br/>... |
+| Supplier<T>          | () -> T             | BooleanSupplier<br/>IntSupplier<br/>...                                |
+| UnaryOperator<T>     | T -> T              | IntUnaryOperator<br/>LongUnaryOperator<br/>...                         |
+| BinaryOperator<T>    | (T, T) -> T         | IntBinaryOperator<br/>LongBinaryOperator<br/>...                       |
+| BiPredicate<L, R>    | (L, R) -> boolean   |                                                                        |
+| BiConsumer<T, U>     | (T, U) -> void      | ObjIntConsumer<T><br/>ObjLongConsumer<T><br/>...                       |
+| BiFunction<T, U, R>  | (T, U) -> R         | ToIntBiFunction<T, U><br/>ToLongBiFunction<T, U><br/>...               |
+
+References: [Functional Interface (Oracle)](https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html), [Interface Stream<T> (Oracle)](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
