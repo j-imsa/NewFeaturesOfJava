@@ -60,6 +60,9 @@ class Apple implements Comparable<Apple> {
     public int weight;
     public String color;
 
+    public Apple() {
+    }
+
     public Apple(int weight, String color) {
         this.weight = weight;
         this.color = color;

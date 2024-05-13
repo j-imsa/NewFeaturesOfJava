@@ -1,12 +1,11 @@
 package java8;
 
 
-
 public class FunctionalInterface {
     public static void main(String[] args) {
-        Predicate<String> nonEmptyStringPredicate = s -> !s.isEmpty();
-        Consumer<String> stringPrinterConsumer = s -> System.out.println(s);
-        Function<String, Integer> stringTolengthFunction = s -> s.length();
+        MyPredicate<String> nonEmptyStringPredicate = s -> !s.isEmpty();
+        MyConsumer<String> stringPrinterConsumer = s -> System.out.println(s);
+        MyFunction<String, Integer> stringTolengthFunction = s -> s.length();
 
 
         // Exercise:
@@ -19,14 +18,14 @@ public class FunctionalInterface {
 }
 
 @java.lang.FunctionalInterface
-interface Predicate<T> {
+interface MyPredicate<T> {
     boolean test(T t);
 }
 
-interface Consumer<T> {
+interface MyConsumer<T> {
     void accept(T t);
 }
 
-interface Function<T, R> {
+interface MyFunction<T, R> {
     R apply(T t);
 }
