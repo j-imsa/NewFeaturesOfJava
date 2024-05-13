@@ -163,3 +163,22 @@ Optional<Integer> max = numbers.stream().reduce(Integer::max);
 #### Sorting
 
 - sort(Comparator) => (T, T) -> int
+
+
+<hr>
+
+### Numeric Streams
+
+
+- Hiding boxing cost: mapToInt()
+  - int (primitive) -> Integer (Object) : boxing 
+  - Integer (Object) -> int (primitive) : unboxing
+
+```java
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+IntStream intStream = Stream.of(1, 2, 3, 4, 5);
+Stream<Integer> stream = intStream.boxed();
+```
+
