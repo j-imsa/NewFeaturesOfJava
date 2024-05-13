@@ -182,3 +182,11 @@ IntStream intStream = Stream.of(1, 2, 3, 4, 5);
 Stream<Integer> stream = intStream.boxed();
 ```
 
+<hr>
+
+### Collecting data with Streams
+
+- Grouping
+- Partitioning
+- Multilevel groupings
+
