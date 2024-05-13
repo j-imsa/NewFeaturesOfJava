@@ -190,3 +190,17 @@ Stream<Integer> stream = intStream.boxed();
 - Partitioning
 - Multilevel groupings
 
+<hr>
+
+### Parallel Streams
+
+```
+stream.parallel()
+      .filter(...)
+      .sequential()
+      .map(...)
+      .parallel()
+      .reduce();
+```
+
+
