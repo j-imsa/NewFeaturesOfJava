@@ -103,7 +103,12 @@ Type 3:
 
 <hr>
 
+### Composing Lambda Expressions
 
+- Comparator
+- Predicate
+- Functions
+- ...
 
 
 
