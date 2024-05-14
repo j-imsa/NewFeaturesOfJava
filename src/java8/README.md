@@ -5,19 +5,19 @@
 ### Functional Programming
 
 - Imperative style programming
-  - what to do? 
-  - How to do?
+    - what to do?
+    - How to do?
 - Declarative style programming
-  - what to do?
+    - what to do?
 - Higher order function
-  - what is a function?
-    - Pass objects to a function
-    - Create objects within a function
-    - Return objects from a function
-  - what is the HOF?
-    - Pass functions to a function
-    - Create function within a function
-    - Return function from a function
+    - what is a function?
+        - Pass objects to a function
+        - Create objects within a function
+        - Return objects from a function
+    - what is the HOF?
+        - Pass functions to a function
+        - Create function within a function
+        - Return function from a function
 
 **Functional programming = Declarative style programming + Higher order function**
 
@@ -26,16 +26,16 @@
 ### Lambda Expression
 
 - Anonymous
-  - less to write, and think about
+    - less to write, and think about
 - Function
-  - parameters
-  - body
-  - return type
-  - exceptions
-  - ...
+    - parameters
+    - body
+    - return type
+    - exceptions
+    - ...
 - Passed around
-  - passed as argument
-  - stored in a variable
+    - passed as argument
+    - stored in a variable
 - Concise
 
 #### Before, After
@@ -51,6 +51,7 @@
 ```
 
 package: java.util.stream (Interface Stream<T>)
+
 - Predicate
 - Supplier
 - BiConsumer
@@ -82,10 +83,9 @@ References: [Functional Interface (Oracle)](https://docs.oracle.com/javase/8/doc
 
 Type 1:
 
-| Lambda                                    | Method Reference          |
-|-------------------------------------------|---------------------------|
-| (args) -> ClassName.staticMethod(args)    | ClassName.staticMethod    |  
-
+| Lambda                                 | Method Reference       |
+|----------------------------------------|------------------------|
+| (args) -> ClassName.staticMethod(args) | ClassName.staticMethod |  
 
 Type 2:
 
@@ -93,13 +93,11 @@ Type 2:
 |-------------------------------------------|---------------------------|
 | (arg0, rest) -> arg0.instanceMethod(rest) | ClassName::instanceMethod |  
 
-
 Type 3:
 
-| Lambda                                    | Method Reference          |
-|-------------------------------------------|---------------------------|
-| (args) -> expr.instanceMethod(args)       | expr::instanceMethod      |  
-
+| Lambda                              | Method Reference     |
+|-------------------------------------|----------------------|
+| (args) -> expr.instanceMethod(args) | expr::instanceMethod |  
 
 <hr>
 
@@ -109,7 +107,6 @@ Type 3:
 - Predicate
 - Functions
 - ...
-
 
 <hr>
 
@@ -125,16 +122,14 @@ Type 3:
 #### Filtering
 
 - filter(Predicate)
-  - distinct()
-  - limit(int) 
-  - skip(int)
-
+    - distinct()
+    - limit(int)
+    - skip(int)
 
 #### Mapping
 
 - map(Function)
 - flatMap()
-
 
 #### Finding
 
@@ -144,14 +139,15 @@ Type 3:
 - findFirst -> return Optional
 - findAny -> return Optional
 
-
 #### Reducing
 
 - functional programming term "fold"
 - reduce(init value, BinaryOperator< T >)
+
 ```java
 int sum = numbers.stream().reduce(0, (a, b) -> a + b);
 ```
+
 - reduce(BinaryOperator< T >)
 
 ```java
@@ -164,15 +160,13 @@ Optional<Integer> max = numbers.stream().reduce(Integer::max);
 
 - sort(Comparator) => (T, T) -> int
 
-
 <hr>
 
 ### Numeric Streams
 
-
 - Hiding boxing cost: mapToInt()
-  - int (primitive) -> Integer (Object) : boxing 
-  - Integer (Object) -> int (primitive) : unboxing
+    - int (primitive) -> Integer (Object) : boxing
+    - Integer (Object) -> int (primitive) : unboxing
 
 ```java
 import java.util.stream.IntStream;
@@ -202,5 +196,101 @@ stream.parallel()
       .parallel()
       .reduce();
 ```
+
+<hr>
+
+### Default Methods
+
+- allows static methods inside interfaces
+- default implementation for methods
+
+[Google Guava](https://github.com/google/guava) vs [Apache Commons](https://commons.apache.org/)
+
+- Abstract class vs Interface
+
+#### Multilevel inheritance
+
+1. Classes
+
+```java
+interface A {
+    default void hello() {
+        System.out.println("Hello from A");
+    }
+}
+
+class B implements A {
+    public void hello() {
+        System.out.println("Hello from B");
+    }
+}
+
+class C extends B implements A {
+    public static void main(String[] args) {
+        new C().hello();
+    }
+}
+```
+
+2. Specific Sub-Interfaces
+
+```java
+interface A {
+    default void hello() {
+        System.out.println("Hello from A");
+    }
+}
+
+interface B extends A {
+    default void hello() {
+        System.out.println("Hello from B");
+    }
+}
+
+class C implements A, B {
+    public static void main(String[] args) {
+        new C().hello();
+    }
+}
+```
+
+3. Explicitly Select
+
+```java
+interface A {
+    default int getNum() {
+        return 10;
+    }
+}
+
+interface B {
+    default int getNum() {
+        return 20;
+    }
+}
+
+class C implements A, B {
+    public static void main(String[] args) {
+        System.out.println(new C().getNum()); // compiler error!
+    }
+}
+```
+
+```java
+class C implements A, B {
+    public static void main(String[] args) {
+        System.out.println(new C().getNum()); // ok!
+    }
+
+    public int getNum() {
+        return B.super.getNum();
+    }
+}
+```
+
+
+<hr>
+
+
 
 
