@@ -288,8 +288,36 @@ class C implements A, B {
 }
 ```
 
-
 <hr>
+
+### Optional
+
+- Haskell and Scala
+- Cyclomatic complexity
+
+```
+return person.getCar().getInsurance().getDate().getYear();
+```
+
+```
+if(person !=null) {
+    Car car = person.getCar();
+    if(car !=null){
+        Insurance insurance = car.getInsurance();
+        if(insurance !=null){
+            //...
+        }
+    }
+}
+```
+
+- Null vs Java philosophy (hiding pointers)
+
+- Groovy:
+
+```groovy
+def carInsuranceName = person?.car?.insurance?.name
+```
 
 
 
