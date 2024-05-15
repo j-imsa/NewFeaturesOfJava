@@ -46,7 +46,7 @@
 
 ### Functional Interface
 
-```java
+```
 @FunctionalInterface
 ```
 
@@ -363,6 +363,56 @@ String result = stringCompletableFuture.get();
 - James gosling
 - JDK 1
 - JDK 1.1
-- joda-time project 
+- joda-time project
 
+<hr>
+
+### Miscellaneous
+
+- PermGen
+    - PermgenOutOfMemoryException
+    - removed
+- Metaspace memory allocation model
+    - out of native memory
+- Metaspace capacity
+    - MaxMetaspaceSize
+- Foreach
+    - list, set, queue, map
+
+```
+import java.util.Arrays;
+import java.util.List;
+
+List<String> names = Arrays.asList("Foo", "Bar");
+names.forEach(System.out::println);
+```
+
+```
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+Set<String> uniqueNames = new HashSet<>(Arrays.asList("Foo", "Bar"));
+uniqueNames.forEach(System.out::println);
+```
+
+```
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Queue;
+
+Queue<String> namesQueue = new ArrayDeque<>(Arrays.asList("Foo", "Bar"));
+namesQueue.forEach(System.out::println);
+```
+Consumer
+```
+import java.util.HashMap;
+import java.util.Map;
+
+Map<Integer, String> namesMap = new HashMap<>();
+namesMap.put(1, "Foo");
+namesMap.put(2, "Bar");
+namesMap.forEach((key, value) -> System.out.println(key + ": " + value));
+```
+BiConsumer
 
