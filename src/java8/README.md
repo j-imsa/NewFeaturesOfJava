@@ -328,15 +328,15 @@ def carInsuranceName = person?.car?.insurance?.name
 - separated thread -> notify main thread
 - completion of failure
 - Future vs CompletableFuture
-  - Java 5
-  - isDone()
-  - get()
-  - limitations:
-    - manual completion
-    - callback function
-    - chain
-    - combine multiple futures
-    - exception handling
+    - Java 5
+    - isDone()
+    - get()
+    - limitations:
+        - manual completion
+        - callback function
+        - chain
+        - combine multiple futures
+        - exception handling
 
 ```java
 import java.util.concurrent.CompletableFuture;
@@ -345,5 +345,24 @@ CompletableFuture<String> stringCompletableFuture = new CompletableFuture<>();
 
 String result = stringCompletableFuture.get();
 ```
+
+<hr>
+
+### New Date Time API
+
+- Challenges
+    - ! thread safe
+    - ! internationalize
+    - ! reflect UTC
+    - millisecond granularity
+    - random offsets
+    - ...
+
+#### Backstory
+
+- James gosling
+- JDK 1
+- JDK 1.1
+- joda-time project 
 
 
