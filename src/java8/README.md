@@ -319,6 +319,31 @@ if(person !=null) {
 def carInsuranceName = person?.car?.insurance?.name
 ```
 
+<hr>
 
+### CompletableFuture
+
+- asynchronous programming
+- non-blocking code
+- separated thread -> notify main thread
+- completion of failure
+- Future vs CompletableFuture
+  - Java 5
+  - isDone()
+  - get()
+  - limitations:
+    - manual completion
+    - callback function
+    - chain
+    - combine multiple futures
+    - exception handling
+
+```java
+import java.util.concurrent.CompletableFuture;
+
+CompletableFuture<String> stringCompletableFuture = new CompletableFuture<>();
+
+String result = stringCompletableFuture.get();
+```
 
 
