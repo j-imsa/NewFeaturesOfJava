@@ -36,6 +36,7 @@ public class Streams {
                 .filter(dish -> dish.getCalorie() < 200) // intermediate operation
                 .sorted(Comparator.comparing(Dish::getCalorie)) // intermediate operation
                 .map(Dish::getName) // intermediate operation
+//                .collect(Collectors.toList())
                 .toList(); // terminal operation
 
         // Print:
@@ -54,6 +55,11 @@ public class Streams {
 
         // find count using reduce ;)
 
+        System.out.println(
+                menu.stream()
+                        .map(dish -> 1)
+                        .reduce(0, (a, b) -> a + b)
+        );
 
     }
 }

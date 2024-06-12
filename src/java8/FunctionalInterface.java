@@ -5,7 +5,7 @@ public class FunctionalInterface {
     public static void main(String[] args) {
         MyPredicate<String> nonEmptyStringPredicate = s -> !s.isEmpty();
         MyConsumer<String> stringPrinterConsumer = s -> System.out.println(s);
-        MyFunction<String, Integer> stringTolengthFunction = s -> s.length();
+        MyFunction<String, Integer> stringToLengthFunction = s -> s.length();
 
 
         // Exercise:

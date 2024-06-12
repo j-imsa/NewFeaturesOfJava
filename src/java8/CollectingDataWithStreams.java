@@ -1,6 +1,7 @@
 package java8;
 
 import java.util.*;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class CollectingDataWithStreams {
@@ -19,7 +20,7 @@ public class CollectingDataWithStreams {
         long howManyApples = inventory.stream()
                 .collect(Collectors.counting());
 
-        Optional<Apple> mostWeightApple = inventory.stream()
+        java.util.Optional<Apple> mostWeightApple = inventory.stream()
                 .collect(Collectors.maxBy(Comparator.comparing(apple -> apple.weight)));
 
         int totalWeight = inventory.stream()
@@ -28,6 +29,7 @@ public class CollectingDataWithStreams {
         double averageWeight = inventory.stream()
                 .collect(Collectors.averagingDouble(apple -> apple.weight));
 
+        // int sum = data.values().stream().mapToInt(Integer::parseInt).sum();
 
         // All-in-one
         IntSummaryStatistics appleIntSummaryStatistics = inventory.stream()
@@ -71,11 +73,16 @@ public class CollectingDataWithStreams {
                 }, Collectors.counting()));
 
         Map<COLOR, Optional<Apple>> mostWeightByColor = inventory.stream()
-                .collect(Collectors.groupingBy(apple -> {
-                    if (apple.color.equalsIgnoreCase(COLOR.RED.toString())) return COLOR.RED;
-                    else if (apple.color.equalsIgnoreCase(COLOR.BLACK.toString())) return COLOR.BLACK;
-                    else return COLOR.GREEN;
-                }, Collectors.maxBy(Comparator.comparing(apple -> apple.weight))));
+                .collect(
+                            Collectors.groupingBy(
+                                    apple -> {
+                                        if (apple.color.equalsIgnoreCase(COLOR.RED.toString())) return COLOR.RED;
+                                        else if (apple.color.equalsIgnoreCase(COLOR.BLACK.toString())) return COLOR.BLACK;
+                                        else return COLOR.GREEN;
+                                    },
+                                    Collectors.maxBy(Comparator.comparing(apple -> apple.weight))
+                            )
+                );
 
         // Partitioning:
         Map<Boolean, List<Apple>> appleWeightPartitioning = inventory.stream()

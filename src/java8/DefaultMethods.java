@@ -5,14 +5,14 @@ public class DefaultMethods implements Washable<Integer> {
     public static void main(String[] args) {
         // Style 1:
         Washable<Integer> washable = new DefaultMethods();
-        washable.doIt();
+//        washable.doIt();
 
         // Style 2:
         DefaultMethods defaultMethods = new DefaultMethods();
-        defaultMethods.doIt();
+//        defaultMethods.doIt();
 
         // Style 3:
-        DefaultMethods.doIt();
+//        DefaultMethods.doIt();
 
         // Style 4:
         Washable.doIt();

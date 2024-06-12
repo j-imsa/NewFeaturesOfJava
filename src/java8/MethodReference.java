@@ -9,7 +9,7 @@ public class MethodReference {
         // Before:
         Comparator<Car> comparator1 = (Car c1, Car c2) -> c1.compareTo(c2);
         // After:
-        Comparator<Car> comparator2 = Comparator.comparing(Car::compareTo);
+        Comparator<Car> comparator2 = Comparator.comparing(new Car()::compareTo);
 
 
         Supplier<Car> carSupplier1 = () -> new Car();

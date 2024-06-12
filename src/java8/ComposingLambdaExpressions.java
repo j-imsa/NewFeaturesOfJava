@@ -40,11 +40,13 @@ public class ComposingLambdaExpressions {
         // Functions:
         Function<Integer, Integer> f = x -> x + 1;
         Function<Integer, Integer> g = x -> x * 2;
+
         Function<Integer, Integer> h1 = f.andThen(g); // gof(x)
         int result = h1.apply(2);
         System.out.println(result);
+
         Function<Integer, Integer> h2 = f.compose(g); // fog(x)
-        result = h1.apply(2);
+        result = h2.apply(2);
         System.out.println(result);
 
     }
