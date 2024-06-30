@@ -1,5 +1,7 @@
 # Java 10
 
+[Oracle](https://www.oracle.com/java/technologies/javase/10-relnote-issues.html), [OpenJDK](https://openjdk.org/projects/jdk/10/)
+
 <hr>
 
 ### Var

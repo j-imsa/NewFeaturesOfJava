@@ -1,5 +1,7 @@
 # Java 11 (LTS)
 
+[Oracle](https://www.oracle.com/java/technologies/javase/11-relnote-issues.html), [OpenJDK](https://openjdk.org/projects/jdk/11/)
+
 - LTS after Java8
 - No free lts support by Oracle
 - OpenJDK

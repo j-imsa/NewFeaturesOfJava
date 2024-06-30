@@ -5,6 +5,9 @@ This is a repo about Java standard edition features:
 ---
 
 ### Java 8  (LTS)
+
+[Oracle](https://www.oracle.com/java/technologies/javase/8u-relnotes.html), [OpenJDK1](https://openjdk.org/projects/jdk8/), [OpenJDK2](https://openjdk.org/projects/jdk8u/)
+
 - Released on March 2014
 - Supported until December 2030
 
@@ -37,6 +40,9 @@ This is a repo about Java standard edition features:
 ---
 
 ### Java 9
+
+[Oracle](https://www.oracle.com/java/technologies/javase/9-all-relnotes.html), [OpenJDK](https://openjdk.org/projects/jdk9/)
+
 - Released on September 2017
 
 #### Java Language Features:
@@ -63,6 +69,9 @@ This is a repo about Java standard edition features:
 ---
 
 ### Java 10
+
+[Oracle](https://www.oracle.com/java/technologies/javase/10-relnote-issues.html), [OpenJDK](https://openjdk.org/projects/jdk/10/)
+
 - Released on March 2018
 
 #### Java Language Features:
@@ -82,6 +91,9 @@ This is a repo about Java standard edition features:
 ---
 
 ### Java 11  (LTS)
+
+[Oracle](https://www.oracle.com/java/technologies/javase/11-relnote-issues.html), [OpenJDK](https://openjdk.org/projects/jdk/11/)
+
 - Released on September 2018
 - Supported until January 2032
 
@@ -105,80 +117,78 @@ This is a repo about Java standard edition features:
 ---
 
 ### Java 12
-- Released on March 2019
 
+[Oracle](https://www.oracle.com/java/technologies/javase/12-relnote-issues.html), [OpenJDK](https://openjdk.org/projects/jdk/12/)
+
+- Released on March 2019
 
 ---
 
 ### Java 13
-- Released on September 2019
 
+[Oracle](https://www.oracle.com/java/technologies/javase/13-relnote-issues.html), [OpenJDK](https://openjdk.org/projects/jdk/13/)
+
+- Released on September 2019
 
 ---
 
 ### Java 14
-- Released on March 2020
 
+- Released on March 2020
 
 ---
 
 ### Java 15
-- Released on September 2020
 
+- Released on September 2020
 
 ---
 
 ### Java 16
+
 - Released on March 2021
-
-
 
 ---
 
 ### Java 17  (LTS)
+
 - Released on September 2021
 - Supported until September 2029
 
 ---
 
 ### Java 18
+
 - Released on March 2022
-
-
 
 ---
 
 ### Java 19
+
 - Released on September 2022
-
-
 
 ---
 
 ### Java 20
+
 - Released on March 2023
-
-
 
 ---
 
 ### Java 21  (LTS)
+
 - Released on September 2023
 - Supported until September 2031
-
-
 
 ---
 
 ### Java 22
+
 - Released on March 2024
-
-
 
 ---
 
 ### Java 23
-
 
 ---
 

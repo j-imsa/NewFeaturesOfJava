@@ -1,5 +1,7 @@
 # Java 8 (LTS)
 
+[Oracle](https://www.oracle.com/java/technologies/javase/8u-relnotes.html), [OpenJDK1](https://openjdk.org/projects/jdk8/), [OpenJDK2](https://openjdk.org/projects/jdk8u/)
+
 <hr>
 
 ### Functional Programming
@@ -404,7 +406,9 @@ import java.util.Queue;
 Queue<String> namesQueue = new ArrayDeque<>(Arrays.asList("Foo", "Bar"));
 namesQueue.forEach(System.out::println);
 ```
+
 Consumer
+
 ```
 import java.util.HashMap;
 import java.util.Map;
@@ -414,5 +418,6 @@ namesMap.put(1, "Foo");
 namesMap.put(2, "Bar");
 namesMap.forEach((key, value) -> System.out.println(key + ": " + value));
 ```
+
 BiConsumer
 
